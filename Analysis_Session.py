@@ -24,5 +24,4 @@ post_res=requests.post(analysis_api_endpoint,headers={'Accept':'application/json
 res_content=post_res.content.decode('utf-8')
 print(res_content)
 analysis_session_id=json.loads(res_content)['analysisSessionId']
-analysis_session_id=None
 assert (analysis_session_id != None),"analysisSessionId is None"
